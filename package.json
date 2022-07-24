@@ -1,0 +1,28 @@
+{
+  "name": "examensarbete-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Siia87/Examensarbete-Backend.git"
+  },
+  "author": "Sofia <Sofia>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Siia87/Examensarbete-Backend/issues"
+  },
+  "homepage": "https://github.com/Siia87/Examensarbete-Backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.4.6",
+    "nodemon": "^2.0.19"
+  }
+}
