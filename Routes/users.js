@@ -7,15 +7,22 @@ appUser.use(cors())
 appUser.use(express.urlencoded({ extended: true }))
 appUser.use(express.json())
 
-appUser.get("/", async (req, res) => {
-  res.send('hej user')
-  /*  const users = await Users.find({})
- 
-    try {
-      res.send(users)
-    } catch (error) {
-      res.status(500).send(error)
-    } */
+appUser.post("/", async (req, res) => {
+  console.log(req.body)
+  console.log('hej från user')
+  const user = await Users.findOne({
+    $and: [
+      { email: req.body.email },
+      { password: req.body.password }
+    ]
+
+  })
+
+  try {
+    res.send(user._id);
+  } catch (error) {
+    res.status(500).send(error)
+  }
 })
 
 
