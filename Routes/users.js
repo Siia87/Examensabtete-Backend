@@ -9,7 +9,7 @@ appUser.use(express.json())
 
 appUser.post("/", async (req, res) => {
   console.log(req.body)
-  console.log('hej från user')
+
   const user = await Users.findOne({
     $and: [
       { email: req.body.email },

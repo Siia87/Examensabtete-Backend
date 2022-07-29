@@ -9,14 +9,14 @@ appTasks.use(express.json())
 
 appTasks
   .get("/", async (req, res) => {
-    res.send('hej tasks')
-    /*  const tasks = await Tasks.find({})
-  
-      try {
-        res.send(tasks)
-      } catch (error) {
-        res.status(500).send(error)
-      }*/
+
+    const tasks = await Tasks.find({})
+
+    try {
+      res.send(tasks)
+    } catch (error) {
+      res.status(500).send(error)
+    }
   })
 
 
