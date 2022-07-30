@@ -9,7 +9,7 @@ const taskSchema = new mongoose.Schema({
     type: String,
     requireed: true
   },
-  desctiption: {
+  description: {
     type: String,
     requireed: false
   },

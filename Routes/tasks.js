@@ -31,8 +31,9 @@ appTasks
       res.status(500).send(error)
     }
   })
-  .delete("/:id", async (req, res) => {
-    const id = req.params.id
+  .delete("/", async (req, res) => {
+    console.log(req.body)
+    const id = req.body
     try {
       const deleteTask = await Tasks.deleteOne({ _id: id })
       res.send(deleteTask)
